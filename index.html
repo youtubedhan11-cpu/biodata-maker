@@ -1,0 +1,3049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biodata Maker — Free Marriage Biodata with Photo, PDF Download</title>
+  <meta name="description" content="Create a free marriage biodata online: 10 designs for Hindu, Muslim, Christian and Sikh formats, add a photo, download PDF or image for WhatsApp. No sign-up, no watermark — your details never leave your phone.">
+  <link rel="canonical" href="https://youtubedhan11-cpu.github.io/biodata-maker/">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Biodata Maker — Free Marriage Biodata with Photo, PDF Download">
+  <meta property="og:description" content="Create a free marriage biodata online: 10 designs for Hindu, Muslim, Christian and Sikh formats, add a photo, download PDF or image for WhatsApp. No sign-up, no watermark — your details never leave your phone.">
+  <meta property="og:url" content="https://youtubedhan11-cpu.github.io/biodata-maker/">
+  <meta property="og:type" content="website">
+
+  <!-- EXACT AdSense plumbing required by ORDER.md -->
+  <script>window.SITE_ADS={publisherId:'ca-pub-4405800574856346',enabled:true};</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4405800574856346" crossorigin="anonymous"></script>
+
+  <!-- External Libraries for PDF and Image Download (cdnjs) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <!-- FAQ JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is it really free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Biodata Maker is 100% free with no hidden charges, premium paywalls, or mandatory account registrations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a watermark?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. All generated PDF files and JPG images are completely clean with zero watermarks or branding."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you upload/store my details or photo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Never. Everything happens 100% locally in your browser. Personal details and photos are never uploaded or stored on any server."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I make a biodata for a boy or a girl?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — same form, choose fields as needed. It works seamlessly for both brides and grooms across all communities."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I share it on WhatsApp?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Click 'Download Image (JPG)' or 'Download PDF' to save your clean biodata to your device, then tap the WhatsApp share button (the user attaches the downloaded image themselves) to send it to prospective families."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I edit after downloading?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — edit the form and download again — your draft is saved in your browser. Your information is preserved in localStorage so you can refine it at any time."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ==========================================================================
+       HARD DESIGN RULES & WEDDING COLOR PALETTE (PURPLE & BLUE STRICTLY BANNED)
+       Background: #faf5ea (cream paper)
+       Deep Maroon: #7b1e1e
+       Gold: #c9962e, #a37218
+       Ink Text: #2b2118
+       Soft Panel: #fffdf6
+       Borders: #e6dac6, #d4c2a5
+       ========================================================================== */
+    :root {
+      --bg-cream: #faf5ea;
+      --panel-cream: #fffdf6;
+      --card-bg: #ffffff;
+      --maroon: #7b1e1e;
+      --maroon-dark: #581212;
+      --maroon-light: #9c2828;
+      --gold: #c9962e;
+      --gold-dark: #a37218;
+      --gold-light: #dfb256;
+      --gold-soft: #f4e8cc;
+      --ink: #2b2118;
+      --ink-muted: #645648;
+      --border-light: #e6dac6;
+      --border-dark: #c8b79b;
+      --focus-ring: rgba(201, 150, 46, 0.45);
+      --font-serif: "Georgia", "Garamond", "Times New Roman", serif;
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    /* Reset & Universal Rules */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: var(--bg-cream);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-size: 15px;
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Strict In-Palette Link & Focus Styles (No Browser Blue / Purple) */
+    a {
+      color: var(--maroon);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.15s ease;
+    }
+    a:visited {
+      color: var(--maroon-dark);
+    }
+    a:hover, a:focus {
+      color: var(--gold-dark);
+      text-decoration: underline;
+    }
+    input:focus, select:focus, textarea:focus, button:focus {
+      outline: none;
+      border-color: var(--gold) !important;
+      box-shadow: 0 0 0 3px var(--focus-ring) !important;
+    }
+
+    /* Top Trust & Branding Header */
+    .site-header {
+      background-color: var(--panel-cream);
+      border-bottom: 2px solid var(--gold);
+      padding: 16px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(43, 33, 24, 0.05);
+    }
+    .header-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .site-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--maroon);
+    }
+    .site-logo svg {
+      width: 32px;
+      height: 32px;
+      fill: var(--gold);
+    }
+    .site-logo-text {
+      font-family: var(--font-serif);
+      font-size: 1.45rem;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      color: var(--maroon);
+    }
+    .badge-pill {
+      font-size: 0.72rem;
+      background: var(--gold-soft);
+      color: var(--maroon-dark);
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--gold);
+      letter-spacing: 0.3px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .header-trust-tag {
+      font-size: 0.82rem;
+      color: var(--ink-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 500;
+    }
+    .privacy-lock-icon {
+      color: var(--gold-dark);
+      display: inline-block;
+    }
+
+    /* Privacy Banner */
+    .privacy-callout {
+      background-color: #f7ecd7;
+      border-bottom: 1px solid var(--border-dark);
+      padding: 10px 16px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--ink);
+    }
+    .privacy-callout strong {
+      color: var(--maroon);
+    }
+
+    /* Hero Section */
+    .hero-section {
+      text-align: center;
+      padding: 36px 20px 24px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .hero-section h1 {
+      font-family: var(--font-serif);
+      font-size: 2.25rem;
+      color: var(--maroon);
+      margin-bottom: 12px;
+      line-height: 1.25;
+    }
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: var(--ink);
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+    .hero-trust-bullets {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 14px;
+      font-size: 0.88rem;
+      color: var(--maroon-dark);
+      font-weight: 600;
+    }
+    .hero-trust-bullets span {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* Ad Slot Placeholder */
+    .ad-slot {
+      max-width: 970px;
+      min-height: 90px;
+      margin: 20px auto;
+      padding: 6px;
+      background: transparent;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    /* Main App Layout */
+    .app-main {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 10px 16px 40px;
+      width: 100%;
+    }
+    .workspace-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+    @media (min-width: 1024px) {
+      .workspace-grid {
+        grid-template-columns: 500px 1fr;
+      }
+    }
+    @media (min-width: 1200px) {
+      .workspace-grid {
+        grid-template-columns: 530px 1fr;
+      }
+    }
+
+    /* Form Column & Panels */
+    .form-column {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .control-panel {
+      background: var(--panel-cream);
+      border: 1px solid var(--border-light);
+      border-radius: 10px;
+      padding: 18px;
+      box-shadow: 0 3px 12px rgba(43, 33, 24, 0.04);
+    }
+    .panel-header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+      border-bottom: 1px dashed var(--border-dark);
+      padding-bottom: 10px;
+    }
+    .panel-title {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      color: var(--maroon);
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .autosave-status {
+      font-size: 0.76rem;
+      color: #3b6b3b;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: #eef7ee;
+      padding: 3px 8px;
+      border-radius: 4px;
+      border: 1px solid #cce2cc;
+      transition: opacity 0.3s ease;
+    }
+
+    /* Preset & Language Selectors */
+    .config-strip {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    @media (max-width: 480px) {
+      .config-strip {
+        grid-template-columns: 1fr;
+      }
+    }
+    .field-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .field-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--ink);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .select-input, .text-input, .textarea-input {
+      width: 100%;
+      background: #ffffff;
+      border: 1px solid var(--border-dark);
+      border-radius: 6px;
+      padding: 8px 12px;
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      color: var(--ink);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .textarea-input {
+      resize: vertical;
+      min-height: 72px;
+    }
+
+    /* Template Carousel / Selector Grid */
+    .template-selector-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--maroon-dark);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .templates-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .template-card-btn {
+      background: #ffffff;
+      border: 2px solid var(--border-light);
+      border-radius: 6px;
+      padding: 7px 4px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--ink);
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+    .template-card-btn:hover {
+      border-color: var(--gold);
+      background: #fffcf5;
+    }
+    .template-card-btn.active {
+      border-color: var(--maroon);
+      background: #fbf2e8;
+      color: var(--maroon);
+      box-shadow: 0 0 0 1px var(--maroon);
+    }
+    .template-swatch {
+      width: 24px;
+      height: 16px;
+      border-radius: 3px;
+      border: 1px solid rgba(0,0,0,0.15);
+    }
+
+    /* Action Toolbar (Sample, Clear) */
+    .form-top-actions {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .btn-secondary {
+      background: #ffffff;
+      border: 1px solid var(--border-dark);
+      color: var(--maroon-dark);
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+    .btn-secondary:hover {
+      background: #fbf5eb;
+      border-color: var(--gold);
+    }
+
+    /* Accordion / Collapsible Sections for Form */
+    .form-sections-container {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .form-section-card {
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(43, 33, 24, 0.02);
+    }
+    .form-section-header {
+      background: #faf5ea;
+      padding: 10px 14px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--maroon);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .form-section-header span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .form-section-body {
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .form-row-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .form-row-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+    }
+    @media (max-width: 540px) {
+      .form-row-2, .form-row-3 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Photo Upload Area */
+    .photo-upload-box {
+      border: 2px dashed var(--gold);
+      background: #fffcf5;
+      padding: 14px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 8px;
+    }
+    .photo-preview-thumb-wrap {
+      position: relative;
+      width: 72px;
+      height: 90px;
+      border: 1px solid var(--border-dark);
+      border-radius: 4px;
+      overflow: hidden;
+      background: #ede3d1;
+      display: none;
+    }
+    .photo-preview-thumb-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .btn-remove-photo {
+      background: var(--maroon);
+      color: #fff;
+      border: none;
+      padding: 2px 6px;
+      font-size: 0.7rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    /* Preview Column (Sticky on Desktop) */
+    .preview-column {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    @media (min-width: 1024px) {
+      .preview-column {
+        position: sticky;
+        top: 80px;
+      }
+    }
+
+    /* Download Toolbar & WhatsApp Share */
+    .download-bar {
+      background: var(--panel-cream);
+      border: 1px solid var(--gold);
+      border-radius: 10px;
+      padding: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      box-shadow: 0 3px 10px rgba(43, 33, 24, 0.05);
+    }
+    .download-actions-left {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .btn-download-pdf {
+      background: var(--maroon);
+      color: #ffffff;
+      border: 1px solid var(--maroon-dark);
+      font-size: 0.9rem;
+      font-weight: 700;
+      padding: 9px 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      transition: background 0.2s;
+    }
+    .btn-download-pdf:hover {
+      background: var(--maroon-dark);
+    }
+    .btn-download-img {
+      background: #ffffff;
+      color: var(--maroon);
+      border: 1px solid var(--gold);
+      font-size: 0.9rem;
+      font-weight: 700;
+      padding: 9px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      transition: all 0.2s;
+    }
+    .btn-download-img:hover {
+      background: #fcf6eb;
+    }
+    .btn-whatsapp-share {
+      background: #205c3b; /* Deep forest green, respectful, in-palette earthy green (NO BLUE / NO PURPLE) */
+      color: #ffffff;
+      border: 1px solid #16422a;
+      font-size: 0.88rem;
+      font-weight: 700;
+      padding: 9px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-whatsapp-share:hover, .btn-whatsapp-share:focus {
+      background: #143823;
+      color: #ffffff;
+      text-decoration: none;
+    }
+    .btn-whatsapp-share:visited {
+      color: #ffffff;
+    }
+
+    /* Live Preview A4 Viewport Container */
+    .preview-canvas-wrapper {
+      background: #504439; /* Warm dark backing to simulate viewing paper */
+      border: 1px solid var(--border-dark);
+      border-radius: 8px;
+      padding: 16px 12px;
+      overflow-x: auto;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      box-shadow: inset 0 2px 8px rgba(0,0,0,0.25);
+    }
+
+    /* EXACT A4 Proportions: 210mm x 297mm (Standard ratio 1 : 1.4142).
+       Standard 96 DPI pixel equivalent: 794px width x 1123px height */
+    .biodata-sheet {
+      width: 794px;
+      min-height: 1123px;
+      height: 1123px;
+      background: #ffffff;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      box-sizing: border-box;
+      transform-origin: top center;
+    }
+
+    /* Mobile Scaling for A4 Preview */
+    @media (max-width: 860px) {
+      .preview-canvas-wrapper {
+        padding: 8px 4px;
+        overflow-x: hidden;
+        min-height: 520px;
+      }
+      .biodata-sheet-scaler {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+      }
+    }
+
+    /* ==========================================================================
+       THE 10 BIODATA DESIGN TEMPLATES (All in-palette, zero purple, zero blue)
+       1. Classic
+       2. Royal Maroon
+       3. Golden Frame
+       4. Elegant Minimal
+       5. Traditional Hindu
+       6. Muslim Green
+       7. Christian Grace
+       8. Sikh Heritage
+       9. Floral
+       10. Modern Clean
+       ========================================================================== */
+
+    /* Common sheet internals */
+    .sheet-inner {
+      width: 100%;
+      height: 100%;
+      padding: 32px 36px;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      position: relative;
+      z-index: 2;
+    }
+    .sheet-heading-quote {
+      text-align: center;
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      letter-spacing: 0.5px;
+    }
+    .sheet-title {
+      text-align: center;
+      font-family: var(--font-serif);
+      font-size: 1.85rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+    .sheet-profile-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 16px;
+      padding-bottom: 14px;
+    }
+    .sheet-profile-info {
+      flex: 1;
+    }
+    .sheet-candidate-name {
+      font-family: var(--font-serif);
+      font-size: 1.65rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 4px;
+    }
+    .sheet-candidate-subline {
+      font-size: 0.92rem;
+      font-weight: 600;
+      opacity: 0.88;
+    }
+    .sheet-photo-frame {
+      width: 105px;
+      height: 130px;
+      flex-shrink: 0;
+      background: #f5eedf;
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    }
+    .sheet-photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .sheet-photo-placeholder {
+      font-size: 0.72rem;
+      color: #8c7a68;
+      text-align: center;
+      padding: 8px;
+    }
+    .sheet-sections-flow {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex: 1;
+    }
+    .sheet-section {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .sheet-section-title {
+      font-family: var(--font-serif);
+      font-size: 1.02rem;
+      font-weight: 700;
+      padding-bottom: 3px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .sheet-grid-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 20px;
+      row-gap: 5px;
+      font-size: 0.86rem;
+    }
+    .sheet-row {
+      display: flex;
+      line-height: 1.35;
+    }
+    .sheet-label {
+      width: 125px;
+      flex-shrink: 0;
+      font-weight: 600;
+      opacity: 0.85;
+      padding-right: 6px;
+    }
+    .sheet-colon {
+      margin-right: 6px;
+      font-weight: 600;
+    }
+    .sheet-val {
+      flex: 1;
+      font-weight: 500;
+      word-break: break-word;
+    }
+    .sheet-full-row {
+      grid-column: span 2;
+      display: flex;
+      line-height: 1.35;
+    }
+    .sheet-footer-note {
+      margin-top: auto;
+      text-align: center;
+      font-size: 0.72rem;
+      opacity: 0.7;
+      padding-top: 8px;
+      border-top: 1px dotted rgba(0,0,0,0.15);
+    }
+
+    /* Template 1: Classic */
+    .tpl-classic {
+      background: #faf6ee;
+      color: #2b2118;
+      border: 14px solid #f2e7d3;
+      outline: 2px solid #7b1e1e;
+      outline-offset: -8px;
+    }
+    .tpl-classic .sheet-heading-quote { color: #7b1e1e; }
+    .tpl-classic .sheet-title { color: #7b1e1e; border-bottom: 2px double #c9962e; padding-bottom: 6px; }
+    .tpl-classic .sheet-profile-header { border-bottom: 1px solid #d4c2a5; }
+    .tpl-classic .sheet-candidate-name { color: #7b1e1e; }
+    .tpl-classic .sheet-photo-frame { border: 2px solid #c9962e; }
+    .tpl-classic .sheet-section-title { color: #7b1e1e; border-bottom: 1px solid #c9962e; }
+    .tpl-classic .sheet-label { color: #581212; }
+
+    /* Template 2: Royal Maroon */
+    .tpl-royal-maroon {
+      background: #fffdf8;
+      color: #261d15;
+      border: 10px solid #7b1e1e;
+    }
+    .tpl-royal-maroon .sheet-top-header {
+      background: #7b1e1e;
+      color: #f7eed8;
+      margin: -32px -36px 16px -36px;
+      padding: 16px 24px;
+      text-align: center;
+      border-bottom: 3px solid #c9962e;
+    }
+    .tpl-royal-maroon .sheet-heading-quote { color: #dfb256; }
+    .tpl-royal-maroon .sheet-title { color: #ffffff; letter-spacing: 2px; }
+    .tpl-royal-maroon .sheet-candidate-name { color: #7b1e1e; }
+    .tpl-royal-maroon .sheet-photo-frame { border: 3px solid #7b1e1e; }
+    .tpl-royal-maroon .sheet-section-title {
+      background: #fbf3e6;
+      color: #7b1e1e;
+      padding: 4px 10px;
+      border-left: 4px solid #7b1e1e;
+      border-bottom: 1px solid #dfb256;
+    }
+    .tpl-royal-maroon .sheet-label { color: #7b1e1e; font-weight: 700; }
+
+    /* Template 3: Golden Frame */
+    .tpl-golden-frame {
+      background: #fdfaf3;
+      color: #2e241b;
+      border: 12px double #c9962e;
+      outline: 1px solid #a37218;
+      outline-offset: -5px;
+    }
+    .tpl-golden-frame .sheet-heading-quote { color: #a37218; }
+    .tpl-golden-frame .sheet-title {
+      color: #7b1e1e;
+      text-shadow: 1px 1px 0 #ecd5a0;
+      border-bottom: 2px solid #c9962e;
+      padding-bottom: 6px;
+    }
+    .tpl-golden-frame .sheet-candidate-name { color: #7b1e1e; }
+    .tpl-golden-frame .sheet-photo-frame {
+      border: 2px solid #c9962e;
+      box-shadow: 0 0 0 3px #f7eedb, 0 3px 8px rgba(163,114,24,0.25);
+    }
+    .tpl-golden-frame .sheet-section-title {
+      color: #a37218;
+      border-bottom: 1.5px solid #c9962e;
+    }
+    .tpl-golden-frame .sheet-label { color: #7b1e1e; }
+
+    /* Template 4: Elegant Minimal */
+    .tpl-elegant-minimal {
+      background: #ffffff;
+      color: #2b2118;
+      border: 1px solid #d4c2a5;
+    }
+    .tpl-elegant-minimal .sheet-heading-quote { color: #7b1e1e; font-weight: 500; font-size: 0.95rem; }
+    .tpl-elegant-minimal .sheet-title {
+      font-family: var(--font-sans);
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: 3px;
+      color: #7b1e1e;
+      border-bottom: 1px solid #e6dac6;
+      padding-bottom: 8px;
+    }
+    .tpl-elegant-minimal .sheet-candidate-name { font-family: var(--font-sans); font-size: 1.5rem; color: #2b2118; }
+    .tpl-elegant-minimal .sheet-photo-frame { border: 1px solid #b8a58b; border-radius: 2px; }
+    .tpl-elegant-minimal .sheet-section-title {
+      font-family: var(--font-sans);
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #7b1e1e;
+      border-bottom: 1px solid #d4c2a5;
+    }
+    .tpl-elegant-minimal .sheet-label { color: #645648; font-weight: 600; }
+
+    /* Template 5: Traditional Hindu */
+    .tpl-traditional-hindu {
+      background: #fffdf5;
+      color: #291e14;
+      border: 14px solid #f5ebd3;
+      outline: 3px solid #b8411b; /* Saffron-red traditional outline */
+      outline-offset: -7px;
+    }
+    .tpl-traditional-hindu .sheet-heading-quote {
+      color: #b8411b;
+      font-size: 1.25rem;
+      letter-spacing: 1px;
+    }
+    .tpl-traditional-hindu .sheet-title {
+      color: #7b1e1e;
+      border-bottom: 2px solid #b8411b;
+      padding-bottom: 4px;
+    }
+    .tpl-traditional-hindu .sheet-candidate-name { color: #7b1e1e; }
+    .tpl-traditional-hindu .sheet-photo-frame {
+      border: 2px solid #b8411b;
+      box-shadow: 0 0 0 2px #c9962e;
+    }
+    .tpl-traditional-hindu .sheet-section-title {
+      color: #b8411b;
+      border-bottom: 1px dashed #c9962e;
+    }
+    .tpl-traditional-hindu .sheet-label { color: #7b1e1e; font-weight: 700; }
+
+    /* Template 6: Muslim Green (Islamic Green & Gold — ZERO BLUE / ZERO PURPLE) */
+    .tpl-muslim-green {
+      background: #fafaf5;
+      color: #1f2a22;
+      border: 12px double #1d5c3a;
+      outline: 1.5px solid #c9962e;
+      outline-offset: -5px;
+    }
+    .tpl-muslim-green .sheet-top-header {
+      background: #14422b;
+      margin: -32px -36px 16px -36px;
+      padding: 16px 24px;
+      text-align: center;
+      border-bottom: 3px solid #c9962e;
+    }
+    .tpl-muslim-green .sheet-heading-quote {
+      color: #dfb256;
+      font-size: 1.25rem;
+      letter-spacing: 1px;
+    }
+    .tpl-muslim-green .sheet-title {
+      color: #ffffff;
+      letter-spacing: 2px;
+      margin-bottom: 0;
+    }
+    .tpl-muslim-green .sheet-candidate-name { color: #1d5c3a; }
+    .tpl-muslim-green .sheet-photo-frame {
+      border: 2px solid #1d5c3a;
+      box-shadow: 0 0 0 2px #c9962e;
+    }
+    .tpl-muslim-green .sheet-section-title {
+      color: #14422b;
+      border-bottom: 1.5px solid #1d5c3a;
+      background: #edf5ef;
+      padding: 3px 8px;
+    }
+    .tpl-muslim-green .sheet-label { color: #1d5c3a; font-weight: 700; }
+
+    /* Template 7: Christian Grace */
+    .tpl-christian-grace {
+      background: #fefdfa;
+      color: #2b2520;
+      border: 1px solid #baa68c;
+      outline: 6px solid #f6f0e4;
+      outline-offset: -9px;
+    }
+    .tpl-christian-grace .sheet-heading-quote {
+      color: #7b1e1e;
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.1rem;
+    }
+    .tpl-christian-grace .sheet-title {
+      color: #4a3c2e;
+      font-weight: 600;
+      letter-spacing: 2px;
+      border-bottom: 1px solid #c9962e;
+      padding-bottom: 6px;
+    }
+    .tpl-christian-grace .sheet-candidate-name { color: #7b1e1e; }
+    .tpl-christian-grace .sheet-photo-frame {
+      border: 1.5px solid #baa68c;
+      border-radius: 4px;
+    }
+    .tpl-christian-grace .sheet-section-title {
+      color: #7b1e1e;
+      font-weight: 700;
+      border-bottom: 1px solid #baa68c;
+    }
+    .tpl-christian-grace .sheet-label { color: #5a4b3d; font-weight: 600; }
+
+    /* Template 8: Sikh Heritage (Royal Saffron & Maroon) */
+    .tpl-sikh-heritage {
+      background: #fdf8ed;
+      color: #2c2016;
+      border: 12px solid #b45309;
+      outline: 2px solid #7b1e1e;
+      outline-offset: -5px;
+    }
+    .tpl-sikh-heritage .sheet-top-header {
+      background: #b45309;
+      margin: -32px -36px 16px -36px;
+      padding: 16px 24px;
+      text-align: center;
+      border-bottom: 3px solid #7b1e1e;
+    }
+    .tpl-sikh-heritage .sheet-heading-quote {
+      color: #fff9ed;
+      font-size: 1.35rem;
+      font-weight: 800;
+    }
+    .tpl-sikh-heritage .sheet-title {
+      color: #ffffff;
+      letter-spacing: 2px;
+      margin-bottom: 0;
+    }
+    .tpl-sikh-heritage .sheet-candidate-name { color: #7b1e1e; }
+    .tpl-sikh-heritage .sheet-photo-frame {
+      border: 3px solid #b45309;
+    }
+    .tpl-sikh-heritage .sheet-section-title {
+      background: #f7e8ce;
+      color: #7b1e1e;
+      padding: 3px 8px;
+      border-left: 4px solid #b45309;
+      border-bottom: 1px solid #d97706;
+    }
+    .tpl-sikh-heritage .sheet-label { color: #b45309; font-weight: 700; }
+
+    /* Template 9: Floral */
+    .tpl-floral {
+      background: #fdfaf5;
+      color: #2f251c;
+      border: 12px solid #f4e8dc;
+      outline: 2px solid #c9962e;
+      outline-offset: -6px;
+    }
+    .tpl-floral .sheet-heading-quote { color: #7b1e1e; }
+    .tpl-floral .sheet-title {
+      color: #7b1e1e;
+      position: relative;
+      padding-bottom: 8px;
+    }
+    .tpl-floral .sheet-title::after {
+      content: "❦ ❧";
+      display: block;
+      font-size: 0.85rem;
+      color: #c9962e;
+      margin-top: 2px;
+    }
+    .tpl-floral .sheet-candidate-name { color: #7b1e1e; }
+    .tpl-floral .sheet-photo-frame {
+      border: 2px solid #c9962e;
+      border-radius: 6px;
+    }
+    .tpl-floral .sheet-section-title {
+      color: #7b1e1e;
+      border-bottom: 1px dotted #c9962e;
+    }
+    .tpl-floral .sheet-label { color: #7b1e1e; }
+
+    /* Template 10: Modern Clean */
+    .tpl-modern-clean {
+      background: #ffffff;
+      color: #2b2118;
+      border: 8px solid #f2e9dc;
+    }
+    .tpl-modern-clean .sheet-heading-quote { color: #a37218; font-size: 0.95rem; }
+    .tpl-modern-clean .sheet-title {
+      font-family: var(--font-sans);
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #7b1e1e;
+      letter-spacing: 1px;
+      background: #faf3e8;
+      padding: 6px 12px;
+      border-radius: 4px;
+    }
+    .tpl-modern-clean .sheet-candidate-name { font-family: var(--font-sans); color: #7b1e1e; font-size: 1.5rem; }
+    .tpl-modern-clean .sheet-photo-frame { border-radius: 6px; border: 2px solid #dfb256; }
+    .tpl-modern-clean .sheet-section-title {
+      font-family: var(--font-sans);
+      color: #7b1e1e;
+      font-size: 0.92rem;
+      font-weight: 700;
+      border-bottom: 2px solid #f2e0c2;
+    }
+    .tpl-modern-clean .sheet-label { color: #581212; font-weight: 600; }
+
+    /* ==========================================================================
+       EDITORIAL, SEO, FAQ & TRUST SECTIONS
+       ========================================================================== */
+    .content-container {
+      max-width: 1000px;
+      margin: 40px auto 20px;
+      padding: 0 16px;
+    }
+    .info-card {
+      background: var(--panel-cream);
+      border: 1px solid var(--border-light);
+      border-radius: 10px;
+      padding: 30px 28px;
+      margin-bottom: 30px;
+      box-shadow: 0 3px 12px rgba(43, 33, 24, 0.03);
+    }
+    .info-card h2 {
+      font-family: var(--font-serif);
+      font-size: 1.7rem;
+      color: var(--maroon);
+      margin-bottom: 14px;
+      line-height: 1.3;
+    }
+    .info-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      color: var(--maroon);
+      margin: 18px 0 8px;
+    }
+    .info-card p {
+      margin-bottom: 12px;
+      color: var(--ink);
+      line-height: 1.65;
+    }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+    .step-box {
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+      padding: 18px;
+      border-top: 3px solid var(--gold);
+    }
+    .step-number {
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      background: var(--maroon);
+      color: #fff;
+      font-weight: 700;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 28px;
+      font-size: 0.85rem;
+      margin-bottom: 8px;
+    }
+    .step-box h4 {
+      font-size: 1.05rem;
+      color: var(--maroon);
+      margin-bottom: 6px;
+    }
+
+    /* Formats Comparison Grid */
+    .formats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .format-card {
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+      padding: 16px;
+      border-left: 4px solid var(--maroon);
+    }
+    .format-card h4 {
+      color: var(--maroon);
+      font-size: 1rem;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .format-card ul {
+      padding-left: 18px;
+      font-size: 0.88rem;
+      color: var(--ink-muted);
+      line-height: 1.5;
+    }
+
+    /* FAQ Accordion */
+    .faq-item {
+      border: 1px solid var(--border-light);
+      border-radius: 6px;
+      margin-bottom: 10px;
+      background: #ffffff;
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: 14px 18px;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--maroon);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fffdf9;
+      user-select: none;
+    }
+    .faq-question:hover {
+      background: #fbf5ea;
+    }
+    .faq-answer {
+      padding: 12px 18px 16px;
+      font-size: 0.92rem;
+      color: var(--ink);
+      line-height: 1.6;
+      border-top: 1px solid var(--border-light);
+    }
+
+    /* Site Footer & Trust Pages */
+    .site-footer {
+      background: #251c15;
+      color: #ede2d3;
+      padding: 40px 20px 24px;
+      margin-top: auto;
+      border-top: 3px solid var(--gold);
+    }
+    .footer-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 24px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+    }
+    .footer-links a {
+      color: #dfb256;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .footer-links a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+    .footer-links a:visited {
+      color: #dfb256;
+    }
+    .footer-trust-copy {
+      font-size: 0.82rem;
+      color: #bfaea0;
+      line-height: 1.6;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    .footer-bottom {
+      text-align: center;
+      font-size: 0.78rem;
+      color: #8c7866;
+    }
+
+    /* Print Fallback Styles */
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+      }
+      .site-header, .hero-section, .privacy-callout, .form-column, .download-bar,
+      .content-container, .site-footer, .ad-slot, .preview-scale-info {
+        display: none !important;
+      }
+      .app-main {
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      .preview-column {
+        position: static !important;
+      }
+      .preview-canvas-wrapper {
+        background: none !important;
+        border: none !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+      }
+      .biodata-sheet {
+        box-shadow: none !important;
+        width: 100% !important;
+        height: 100% !important;
+        page-break-after: avoid;
+        page-break-inside: avoid;
+      }
+      @page {
+        size: A4 portrait;
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Site Header with Trust Badge -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" class="site-logo" aria-label="Biodata Maker Home">
+        <!-- Pure SVG Wedding Kalash / Knot Motif (No external image) -->
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 2L9 6h6l-3-4zm-7 6h14c1 0 2 1 2 2v2c0 4-3 8-7 10-4-2-7-6-7-10V10c0-1 1-2 2-2zm7 9c2.5-1.5 4.5-4 4.8-7H7.2c.3 3 2.3 5.5 4.8 7z"/>
+        </svg>
+        <span class="site-logo-text">Biodata Maker</span>
+      </a>
+      <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+        <span class="badge-pill">
+          <span>✓</span> 100% Client-Side Privacy
+        </span>
+        <div class="header-trust-tag">
+          <span class="privacy-lock-icon">🔒</span> No Login • No Watermark • Free
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Big Privacy Callout Banner -->
+  <div class="privacy-callout">
+    <strong>Privacy Guarantee:</strong> EVERYTHING happens in your browser. Personal details and photos are <strong>NEVER uploaded to any server</strong>.
+  </div>
+
+  <!-- Hero Header -->
+  <section class="hero-section">
+    <h1>Free Marriage Biodata Maker</h1>
+    <p class="hero-subtitle">Make a beautiful marriage biodata in minutes — free, no sign-up, no watermark.</p>
+    <div class="hero-trust-bullets">
+      <span>✓ 10 Community-Inspired Designs</span>
+      <span>✓ Instant A4 PDF & Image Download</span>
+      <span>✓ Direct WhatsApp Sharing</span>
+      <span>✓ English & Hindi Labels</span>
+    </div>
+  </section>
+
+  <!-- Ad Slot 1 (Required by ORDER.md) -->
+  <div class="ad-slot"></div>
+
+  <!-- Main Application Workspace -->
+  <main class="app-main">
+    <div class="workspace-grid">
+
+      <!-- LEFT COLUMN: Form & Customization Controls -->
+      <section class="form-column" aria-label="Biodata Editor Form">
+
+        <div class="control-panel">
+          <div class="panel-header-row">
+            <h2 class="panel-title">
+              <span>⚙️</span> Customize Design & Community
+            </h2>
+            <div id="autosave-indicator" class="autosave-status">
+              ✓ Draft saved locally
+            </div>
+          </div>
+
+          <!-- Community Preset & Language Toggle -->
+          <div class="config-strip">
+            <div class="field-group">
+              <label for="community-preset" class="field-label">Community Preset</label>
+              <select id="community-preset" class="select-input">
+                <option value="hindu" selected>Hindu (Gotra, Rashi, Manglik)</option>
+                <option value="muslim">Muslim (Sect, Namaz, Grace)</option>
+                <option value="christian">Christian (Denomination, Parish)</option>
+                <option value="sikh">Sikh (Amritdhari, Gotra)</option>
+                <option value="jain">Jain (Sampradaya, Gotra)</option>
+                <option value="buddhist">Buddhist (Faith, Traditions)</option>
+                <option value="other">No preference / General</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label for="label-lang" class="field-label">Biodata Label Language</label>
+              <select id="label-lang" class="select-input">
+                <option value="en" selected>English Labels</option>
+                <option value="hi">हिंदी (Devanagari Labels)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Header Blessing Line (Editable) -->
+          <div class="field-group" style="margin-bottom: 14px;">
+            <label for="header-blessing" class="field-label">Top Heading / Blessing (Editable)</label>
+            <input type="text" id="header-blessing" class="text-input" value="॥ श्री गणेशाय नमः ॥" placeholder="e.g. ॥ श्री गणेशाय नमः ॥ or In God's Grace">
+          </div>
+
+          <!-- Template Picker (10 Templates) -->
+          <div class="template-selector-title">Select Design Template (10 Styles)</div>
+          <div class="templates-grid" id="template-buttons">
+            <button type="button" class="template-card-btn active" data-tpl="tpl-classic">
+              <div class="template-swatch" style="background:#faf6ee; border-color:#7b1e1e;"></div>
+              <span>Classic</span>
+            </button>
+            <button type="button" class="template-card-btn" data-tpl="tpl-royal-maroon">
+              <div class="template-swatch" style="background:#7b1e1e; border-color:#c9962e;"></div>
+              <span>Royal Maroon</span>
+            </button>
+            <button type="button" class="template-card-btn" data-tpl="tpl-golden-frame">
+              <div class="template-swatch" style="background:#fdfaf3; border-color:#c9962e;"></div>
+              <span>Golden Frame</span>
+            </button>
+            <button type="button" class="template-card-btn" data-tpl="tpl-elegant-minimal">
+              <div class="template-swatch" style="background:#ffffff; border-color:#b8a58b;"></div>
+              <span>Elegant Minimal</span>
+            </button>
+            <button type="button" class="template-card-btn" data-tpl="tpl-traditional-hindu">
+              <div class="template-swatch" style="background:#fffdf5; border-color:#b8411b;"></div>
+              <span>Traditional Hindu</span>
+            </button>
+            <button type="button" class="template-card-btn" data-tpl="tpl-muslim-green">
+              <div class="template-swatch" style="background:#edf5ef; border-color:#1d5c3a;"></div>
+              <span>Muslim Green</span>
+            </button>
+            <button type="button" class="template-card-btn" data-tpl="tpl-christian-grace">
+              <div class="template-swatch" style="background:#fefdfa; border-color:#baa68c;"></div>
+              <span>Christian Grace</span>
+            </button>
+            <button type="button" class="template-card-btn" data-tpl="tpl-sikh-heritage">
+              <div class="template-swatch" style="background:#fdf8ed; border-color:#b45309;"></div>
+              <span>Sikh Heritage</span>
+            </button>
+            <button type="button" class="template-card-btn" data-tpl="tpl-floral">
+              <div class="template-swatch" style="background:#fdfaf5; border-color:#dfb256;"></div>
+              <span>Floral</span>
+            </button>
+            <button type="button" class="template-card-btn" data-tpl="tpl-modern-clean">
+              <div class="template-swatch" style="background:#f2e9dc; border-color:#7b1e1e;"></div>
+              <span>Modern Clean</span>
+            </button>
+          </div>
+
+          <!-- Sample & Clear Action Buttons -->
+          <div class="form-top-actions">
+            <button type="button" id="btn-sample-data" class="btn-secondary">
+              <span>★</span> See a Sample
+            </button>
+            <button type="button" id="btn-clear-all" class="btn-secondary" style="color: #645648;">
+              <span>✕</span> Clear All
+            </button>
+          </div>
+        </div>
+
+        <!-- FORM ACCORDION SECTIONS -->
+        <form id="biodata-form" class="form-sections-container" onsubmit="return false;">
+
+          <!-- 1. Photo Upload Section -->
+          <div class="form-section-card">
+            <div class="form-section-header">
+              <span>📷 Candidate Photo (Optional)</span>
+            </div>
+            <div class="form-section-body">
+              <div class="photo-upload-box">
+                <div class="photo-preview-thumb-wrap" id="photo-thumb-container">
+                  <img id="photo-thumb" src="" alt="Thumbnail preview">
+                </div>
+                <input type="file" id="photo-input" accept="image/*" class="text-input" style="max-width: 320px;">
+                <p style="font-size: 0.78rem; color: var(--ink-muted);">
+                  Processed 100% locally in your browser. Never uploaded to any server.
+                </p>
+                <button type="button" id="btn-remove-photo" class="btn-remove-photo" style="display:none;">
+                  Remove Photo
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Personal Information -->
+          <div class="form-section-card">
+            <div class="form-section-header">
+              <span>👤 Personal Details</span>
+            </div>
+            <div class="form-section-body">
+              <div class="field-group">
+                <label for="inp-fullname" class="field-label">Full Name</label>
+                <input type="text" id="inp-fullname" class="text-input" placeholder="e.g. Aarav Sharma / Priya Patel">
+              </div>
+
+              <div class="form-row-2">
+                <div class="field-group">
+                  <label for="inp-dob" class="field-label">Date of Birth</label>
+                  <input type="date" id="inp-dob" class="text-input">
+                </div>
+                <div class="field-group">
+                  <label for="inp-birthtime" class="field-label">Birth Time</label>
+                  <input type="text" id="inp-birthtime" class="text-input" placeholder="e.g. 06:45 AM">
+                </div>
+              </div>
+
+              <div class="form-row-2">
+                <div class="field-group">
+                  <label for="inp-birthplace" class="field-label">Birth Place</label>
+                  <input type="text" id="inp-birthplace" class="text-input" placeholder="e.g. Jaipur, Rajasthan">
+                </div>
+                <div class="field-group">
+                  <label for="inp-height" class="field-label">Height</label>
+                  <input type="text" id="inp-height" class="text-input" placeholder="e.g. 5 ft 10 in (178 cm)">
+                </div>
+              </div>
+
+              <div class="form-row-3">
+                <div class="field-group">
+                  <label for="inp-weight" class="field-label">Weight</label>
+                  <input type="text" id="inp-weight" class="text-input" placeholder="e.g. 68 kg">
+                </div>
+                <div class="field-group">
+                  <label for="inp-complexion" class="field-label">Complexion</label>
+                  <input type="text" id="inp-complexion" class="text-input" placeholder="e.g. Fair / Wheatish">
+                </div>
+                <div class="field-group">
+                  <label for="inp-bloodgroup" class="field-label">Blood Group</label>
+                  <input type="text" id="inp-bloodgroup" class="text-input" placeholder="e.g. B+">
+                </div>
+              </div>
+
+              <div class="form-row-2">
+                <div class="field-group">
+                  <label for="inp-marital" class="field-label">Marital Status</label>
+                  <select id="inp-marital" class="select-input">
+                    <option value="Never Married">Never Married</option>
+                    <option value="Awaiting Divorce">Awaiting Divorce</option>
+                    <option value="Divorced">Divorced</option>
+                    <option value="Widowed">Widowed</option>
+                    <option value="Annulled">Annulled</option>
+                  </select>
+                </div>
+                <div class="field-group">
+                  <label for="inp-mothertongue" class="field-label">Mother Tongue</label>
+                  <input type="text" id="inp-mothertongue" class="text-input" placeholder="e.g. Hindi, Gujarati, Punjabi">
+                </div>
+              </div>
+
+              <div class="form-row-2">
+                <div class="field-group">
+                  <label for="inp-religion" class="field-label">Religion</label>
+                  <input type="text" id="inp-religion" class="text-input" placeholder="e.g. Hindu / Muslim / Sikh">
+                </div>
+                <div class="field-group">
+                  <label for="inp-caste" class="field-label">Caste / Sub-caste</label>
+                  <input type="text" id="inp-caste" class="text-input" placeholder="e.g. Brahmin (Gour), Rajput">
+                </div>
+              </div>
+
+              <!-- Community-Specific Faith Dynamic Fields -->
+              <div id="faith-fields-container" style="border-top: 1px dashed var(--border-light); padding-top: 10px;">
+                <!-- Dynamically injected fields based on preset -->
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Education & Work -->
+          <div class="form-section-card">
+            <div class="form-section-header">
+              <span>🎓 Education & Career</span>
+            </div>
+            <div class="form-section-body">
+              <div class="field-group">
+                <label for="inp-education" class="field-label">Highest Education</label>
+                <input type="text" id="inp-education" class="text-input" placeholder="e.g. B.Tech in Computer Science / MBA">
+              </div>
+              <div class="field-group">
+                <label for="inp-college" class="field-label">College / University</label>
+                <input type="text" id="inp-college" class="text-input" placeholder="e.g. IIT Delhi / Delhi University">
+              </div>
+              <div class="form-row-2">
+                <div class="field-group">
+                  <label for="inp-occupation" class="field-label">Occupation / Profession</label>
+                  <input type="text" id="inp-occupation" class="text-input" placeholder="e.g. Senior Software Engineer / Doctor">
+                </div>
+                <div class="field-group">
+                  <label for="inp-company" class="field-label">Company / Organization</label>
+                  <input type="text" id="inp-company" class="text-input" placeholder="e.g. Multinational Tech Firm, Bangalore">
+                </div>
+              </div>
+              <div class="field-group">
+                <label for="inp-income" class="field-label">Annual Income</label>
+                <input type="text" id="inp-income" class="text-input" placeholder="e.g. ₹22 Lakhs per annum / Handsome">
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Family Background -->
+          <div class="form-section-card">
+            <div class="form-section-header">
+              <span>🏡 Family Details</span>
+            </div>
+            <div class="form-section-body">
+              <div class="form-row-2">
+                <div class="field-group">
+                  <label for="inp-fathername" class="field-label">Father's Name</label>
+                  <input type="text" id="inp-fathername" class="text-input" placeholder="e.g. Shri Rajesh Sharma">
+                </div>
+                <div class="field-group">
+                  <label for="inp-fatherocc" class="field-label">Father's Occupation</label>
+                  <input type="text" id="inp-fatherocc" class="text-input" placeholder="e.g. Senior Manager (Retd. Bank)">
+                </div>
+              </div>
+              <div class="form-row-2">
+                <div class="field-group">
+                  <label for="inp-mothername" class="field-label">Mother's Name</label>
+                  <input type="text" id="inp-mothername" class="text-input" placeholder="e.g. Smt. Sunita Sharma">
+                </div>
+                <div class="field-group">
+                  <label for="inp-motherocc" class="field-label">Mother's Occupation</label>
+                  <input type="text" id="inp-motherocc" class="text-input" placeholder="e.g. Homemaker / School Teacher">
+                </div>
+              </div>
+              <div class="form-row-2">
+                <div class="field-group">
+                  <label for="inp-siblings" class="field-label">Siblings</label>
+                  <input type="text" id="inp-siblings" class="text-input" placeholder="e.g. 1 Elder Brother (Married), 1 Sister">
+                </div>
+                <div class="field-group">
+                  <label for="inp-familytype" class="field-label">Family Type</label>
+                  <select id="inp-familytype" class="select-input">
+                    <option value="Nuclear Family">Nuclear Family</option>
+                    <option value="Joint Family">Joint Family</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row-2">
+                <div class="field-group">
+                  <label for="inp-familystatus" class="field-label">Family Status / Values</label>
+                  <input type="text" id="inp-familystatus" class="text-input" placeholder="e.g. Upper Middle Class / Moderate Values">
+                </div>
+                <div class="field-group">
+                  <label for="inp-nativeplace" class="field-label">Native Place / Origin</label>
+                  <input type="text" id="inp-nativeplace" class="text-input" placeholder="e.g. Jaipur, Rajasthan">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Contact Details -->
+          <div class="form-section-card">
+            <div class="form-section-header">
+              <span>📞 Contact Details</span>
+            </div>
+            <div class="form-section-body">
+              <div class="field-group">
+                <label for="inp-address" class="field-label">Residential Address</label>
+                <textarea id="inp-address" class="textarea-input" placeholder="e.g. Flat 402, Royal Palms, Indiranagar, Bangalore - 560038"></textarea>
+              </div>
+              <div class="form-row-2">
+                <div class="field-group">
+                  <label for="inp-phone" class="field-label">Contact / Mobile Phone</label>
+                  <input type="text" id="inp-phone" class="text-input" placeholder="e.g. +91 98765 43210">
+                </div>
+                <div class="field-group">
+                  <label for="inp-email" class="field-label">Email Address</label>
+                  <input type="email" id="inp-email" class="text-input" placeholder="e.g. contact.sharma@example.com">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Partner Expectations -->
+          <div class="form-section-card">
+            <div class="form-section-header">
+              <span>🤝 Partner Expectations</span>
+            </div>
+            <div class="form-section-body">
+              <div class="field-group">
+                <label for="inp-expectations" class="field-label">Expectations & Values</label>
+                <textarea id="inp-expectations" class="textarea-input" placeholder="e.g. Seeking an educated, caring and family-oriented partner with good family values. Working professionals preferred."></textarea>
+              </div>
+            </div>
+          </div>
+
+        </form>
+
+      </section>
+
+      <!-- RIGHT COLUMN: Live A4 Preview & Download Toolbar -->
+      <section class="preview-column" aria-label="Biodata Live A4 Preview and Export">
+
+        <!-- Download & WhatsApp Share Action Toolbar -->
+        <div class="download-bar">
+          <div class="download-actions-left">
+            <button type="button" id="btn-download-pdf" class="btn-download-pdf">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+              Download PDF
+            </button>
+            <button type="button" id="btn-download-img" class="btn-download-img">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+              Download Image (JPG)
+            </button>
+          </div>
+          <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px;">
+            <a id="btn-whatsapp-share" class="btn-whatsapp-share" href="#" target="_blank" rel="noopener noreferrer" title="Share on WhatsApp">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.41a8.212 8.212 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.42 0-2.82-.37-4.06-1.08l-.29-.17-3.12.82.83-3.04-.19-.3a8.17 8.17 0 0 1-1.25-4.47c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.24-.74-.66-1.24-1.48-1.39-1.73-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44s-.56-1.36-.77-1.86c-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.71 4.3 3.8.6.26 1.07.41 1.44.53.61.19 1.16.17 1.6.1 1.13-.08 1.47-1.44 1.47-1.44z"/></svg>
+              Share on WhatsApp
+            </a>
+            <span style="font-size: 0.72rem; color: var(--ink-muted); text-align: right;">
+              (the user attaches the downloaded image themselves)
+            </span>
+          </div>
+        </div>
+
+        <!-- Preview Viewing Scale Bar -->
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; font-size:0.8rem; color:var(--ink-muted);">
+          <span>📄 A4 Live Preview (Updates on keystroke)</span>
+          <div style="display:flex; gap:6px;">
+            <button type="button" id="btn-zoom-fit" class="btn-secondary" style="padding:3px 8px; font-size:0.75rem;">Fit Screen</button>
+            <button type="button" id="btn-zoom-100" class="btn-secondary" style="padding:3px 8px; font-size:0.75rem;">100% Size</button>
+          </div>
+        </div>
+
+        <!-- The A4 Preview Paper Sheet Container -->
+        <div class="preview-canvas-wrapper">
+          <div class="biodata-sheet-scaler">
+            <div id="biodata-preview" class="biodata-sheet tpl-classic">
+              <div class="sheet-inner">
+
+                <!-- Header Quote / Shloka & Title Container -->
+                <div class="sheet-top-header" id="pv-top-header">
+                  <div id="pv-heading-quote" class="sheet-heading-quote">॥ श्री गणेशाय नमः ॥</div>
+                  <div id="pv-title" class="sheet-title">MARRIAGE BIODATA</div>
+                </div>
+
+                <!-- Candidate Profile Top Bar -->
+                <div class="sheet-profile-header">
+                  <div class="sheet-profile-info">
+                    <div id="pv-fullname" class="sheet-candidate-name">Aarav Sharma</div>
+                    <div id="pv-subline" class="sheet-candidate-subline">Senior Software Engineer • B.Tech</div>
+                  </div>
+                  <!-- Photo Container (Included or Omitted) -->
+                  <div id="pv-photo-frame" class="sheet-photo-frame">
+                    <div id="pv-photo-placeholder" class="sheet-photo-placeholder">Photo Frame</div>
+                    <img id="pv-photo-img" src="" alt="Candidate Photo" style="display:none;">
+                  </div>
+                </div>
+
+                <!-- Structured Dynamic Flow of Sections -->
+                <div class="sheet-sections-flow">
+
+                  <!-- 1. Personal Details -->
+                  <div class="sheet-section" id="pv-sec-personal">
+                    <div class="sheet-section-title" id="pv-lbl-sec-personal">Personal Details</div>
+                    <div class="sheet-grid-2col" id="pv-grid-personal">
+                      <!-- Rows injected dynamically based on language & non-empty fields -->
+                    </div>
+                  </div>
+
+                  <!-- 2. Horoscope / Faith Details (Conditional) -->
+                  <div class="sheet-section" id="pv-sec-faith" style="display:none;">
+                    <div class="sheet-section-title" id="pv-lbl-sec-faith">Horoscope & Faith Details</div>
+                    <div class="sheet-grid-2col" id="pv-grid-faith">
+                      <!-- Injected rows -->
+                    </div>
+                  </div>
+
+                  <!-- 3. Education & Work Details -->
+                  <div class="sheet-section" id="pv-sec-education">
+                    <div class="sheet-section-title" id="pv-lbl-sec-education">Education & Career</div>
+                    <div class="sheet-grid-2col" id="pv-grid-education">
+                      <!-- Injected rows -->
+                    </div>
+                  </div>
+
+                  <!-- 4. Family Details -->
+                  <div class="sheet-section" id="pv-sec-family">
+                    <div class="sheet-section-title" id="pv-lbl-sec-family">Family Details</div>
+                    <div class="sheet-grid-2col" id="pv-grid-family">
+                      <!-- Injected rows -->
+                    </div>
+                  </div>
+
+                  <!-- 5. Contact Details -->
+                  <div class="sheet-section" id="pv-sec-contact">
+                    <div class="sheet-section-title" id="pv-lbl-sec-contact">Contact Details</div>
+                    <div class="sheet-grid-2col" id="pv-grid-contact">
+                      <!-- Injected rows -->
+                    </div>
+                  </div>
+
+                  <!-- 6. Partner Expectations -->
+                  <div class="sheet-section" id="pv-sec-expectations">
+                    <div class="sheet-section-title" id="pv-lbl-sec-expectations">Partner Expectations</div>
+                    <div class="sheet-row" style="font-size: 0.86rem; line-height: 1.4;" id="pv-val-expectations">
+                      <!-- Value injected -->
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- Clean Footer Note -->
+                <div class="sheet-footer-note">
+                  Generated privately via Biodata Maker • Strictly confidential for matrimonial matchmaking
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+
+  <!-- SEO, Information & Editorial Guide Sections -->
+  <div class="content-container">
+
+    <!-- Section 1: Intro & What is a Marriage Biodata -->
+    <article class="info-card">
+      <h2>What is a Marriage Biodata & Why Do Families Exchange It?</h2>
+      <p>
+        In Indian matrimonial traditions across Hindu, Muslim, Christian, Sikh, and Jain communities, a <strong>marriage biodata</strong> (matrimonial CV) serves as the primary formal introduction between two prospective families. Unlike a professional resume, a marriage biodata balances personal accomplishments, academic qualifications, and professional career with essential family lineage, cultural roots, ancestral background, and lifestyle values.
+      </p>
+      <p>
+        Exchanging a well-structured biodata gives elders and prospective partners an honest, respectful summary before taking matrimonial discussions forward, organizing kundali matching (when applicable), or scheduling personal family meetings. An organized, clean, and elegant biodata reflects sincerity, clarity, and thoughtful family pride.
+      </p>
+    </article>
+
+    <!-- Section 2: How to Make in 3 Steps -->
+    <article class="info-card">
+      <h2>How to Make Your Marriage Biodata in 3 Easy Steps</h2>
+      <div class="steps-grid">
+        <div class="step-box">
+          <div class="step-number">1</div>
+          <h4>Fill in Your Details</h4>
+          <p>Select your community preset (Hindu, Muslim, Christian, Sikh, Jain, or General). Enter your personal, education, family, and contact information. You can optionally upload a passport-size photo directly from your device.</p>
+        </div>
+        <div class="step-box">
+          <div class="step-number">2</div>
+          <h4>Choose Your Design</h4>
+          <p>Switch between 10 culturally crafted, elegant templates at any time without losing your information. Choose your preferred label language — English or clean Hindi Devanagari.</p>
+        </div>
+        <div class="step-box">
+          <div class="step-number">3</div>
+          <h4>Download & Share</h4>
+          <p>Download a high-resolution, one-page A4 PDF or WhatsApp-ready JPG image with zero watermarks. Your personal data is never uploaded to any remote server.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Section 3: Formats Explained Across Communities -->
+    <article class="info-card">
+      <h2>Marriage Biodata Formats Explained by Community</h2>
+      <p>Different communities prioritize distinct cultural and astrological details. Our tool comes with built-in presets that automatically adapt the fields:</p>
+      <div class="formats-grid">
+        <div class="format-card">
+          <h4>Hindu Biodata Format</h4>
+          <ul>
+            <li>Traditional shloka or deity invocation (॥ श्री गणेशाय नमः ॥)</li>
+            <li>Astrological kundali details: Gotra, Rashi, Nakshatra</li>
+            <li>Manglik status and Kuldevta</li>
+            <li>Educational degree and native ancestral town</li>
+          </ul>
+        </div>
+        <div class="format-card">
+          <h4>Muslim Biodata Format</h4>
+          <ul>
+            <li>Bismillah blessing banner (بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ)</li>
+            <li>Sect / Maslak (Sunni, Shia, etc. optional)</li>
+            <li>Religious lifestyle (Namaz & Quranic observance)</li>
+            <li>Professional occupation, family background & values</li>
+          </ul>
+        </div>
+        <div class="format-card">
+          <h4>Christian Biodata Format</h4>
+          <ul>
+            <li>Inspirational verse or "In God's Grace" header</li>
+            <li>Christian denomination (Catholic, Protestant, Orthodox)</li>
+            <li>Home Parish / Church membership</li>
+            <li>Career standing, family values, and lifestyle preferences</li>
+          </ul>
+        </div>
+        <div class="format-card">
+          <h4>Sikh Biodata Format</h4>
+          <ul>
+            <li>Reverent Ek Onkar invocation (ੴ ਸਤਿਗੁਰ ਪ੍ਰਸाਦਿ ॥)</li>
+            <li>Gotra / Sub-caste / Pind (ancestral village)</li>
+            <li>Amritdhari status (optional)</li>
+            <li>Professional career, family status, and sibling details</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- Ad Slot 2 (Required by ORDER.md) -->
+    <div class="ad-slot"></div>
+
+    <!-- Section 4: Frequently Asked Questions (FAQ) -->
+    <article class="info-card" id="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Is it really free?</span>
+            <span style="font-size: 1.2rem;">+</span>
+          </div>
+          <div class="faq-answer">
+            Yes, Biodata Maker is 100% free with no hidden charges, premium subscriptions, or mandatory account registrations. You can create, edit, and download as many biodatas as you need without paying anything.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Is there a watermark?</span>
+            <span style="font-size: 1.2rem;">+</span>
+          </div>
+          <div class="faq-answer">
+            No. All downloaded PDF documents and JPG image files are completely free of watermarks, logos, or promotional branding. Your biodata looks formal, dignified, and personal.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Do you upload/store my details or photo?</span>
+            <span style="font-size: 1.2rem;">+</span>
+          </div>
+          <div class="faq-answer">
+            Never. Everything happens 100% locally in your browser. Personal details and photos are never uploaded or stored on any server.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Can I make a biodata for a boy or a girl?</span>
+            <span style="font-size: 1.2rem;">+</span>
+          </div>
+          <div class="faq-answer">
+            Yes — same form, choose fields as needed. The maker works seamlessly for both brides and grooms across all communities.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How do I share it on WhatsApp?</span>
+            <span style="font-size: 1.2rem;">+</span>
+          </div>
+          <div class="faq-answer">
+            Click 'Download Image (JPG)' or 'Download PDF' to save your clean biodata, then tap the WhatsApp share button (the user attaches the downloaded image themselves) to send it to families.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Can I edit after downloading?</span>
+            <span style="font-size: 1.2rem;">+</span>
+          </div>
+          <div class="faq-answer">
+            Yes — edit the form and download again — your draft is saved in your browser. Your information is preserved in localStorage so you can refine it at any time.
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- Trust Sections: About, Privacy, Terms, Disclaimer, Contact -->
+    <article class="info-card" id="trust-details">
+      <h2>About Biodata Maker</h2>
+      <p>
+        Biodata Maker was built to simplify matrimonial matchmaking for families across India and the global diaspora. We believe preparing a formal marriage biodata should be simple, dignified, and completely private—without requiring paid software, graphic design skills, or exposing sensitive personal contact information to third-party databases.
+      </p>
+
+      <h3>Privacy Policy (100% Client-Side Processing)</h3>
+      <p>
+        We treat your personal data with the highest standard of confidentiality. When you create a biodata on this site:
+      </p>
+      <ul style="padding-left: 20px; margin-bottom: 12px; color: var(--ink); line-height: 1.6;">
+        <li><strong>No Server Storage:</strong> Your name, date of birth, family lineage, address, contact numbers, and uploaded photographs are processed entirely inside your local device's browser memory. We maintain zero backend databases for personal user biodata.</li>
+        <li><strong>Local Storage:</strong> Your form draft is cached inside your browser's private <code>localStorage</code> purely for your own convenience so you do not lose progress if you refresh the page. You can clear this anytime using the "Clear All" button.</li>
+        <li><strong>Third-Party Advertising & Cookies:</strong> We utilize Google AdSense to serve advertisements that support site maintenance. Google and third-party vendors use cookies (such as the DoubleClick cookie) to serve relevant ads based on prior visits to this or other websites. You can learn more or customize ad settings at <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer">Google Ad Settings</a> and opt out of third-party vendor cookies at <a href="https://optout.aboutads.info" target="_blank" rel="noopener noreferrer">aboutads.info</a>.</li>
+      </ul>
+
+      <h3>Contact Us</h3>
+      <p>
+        If you have questions, feedback, or suggestions for new community templates, please contact our support team directly at:
+        <br>
+        <strong>Email:</strong> <a href="mailto:purushotamkumar8757118581@gmail.com">purushotamkumar8757118581@gmail.com</a>
+      </p>
+
+      <h3>Disclaimer & Terms of Use</h3>
+      <p>
+        Biodata Maker provides matrimonial biodata formatting and document generation tools for personal, lawful matchmaking purposes. All representations made in generated biodatas are the sole responsibility of the respective user. Users are advised to independently verify all background information during matrimonial alliances. By using this service, you agree to these terms.
+      </p>
+    </article>
+
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="#biodata-form">Create Biodata</a>
+        <a href="#faq">FAQ</a>
+        <a href="#trust-details">Privacy Policy</a>
+        <a href="#trust-details">Terms of Use</a>
+        <a href="#trust-details">About Us</a>
+        <a href="mailto:purushotamkumar8757118581@gmail.com">Contact Support</a>
+      </div>
+      <p class="footer-trust-copy">
+        Biodata Maker is a free matrimonial document maker designed for Indian brides and grooms. 100% private, client-side document processing with zero server uploads and zero watermarks.
+      </p>
+      <p class="footer-bottom">
+        © 2026 Biodata Maker. All rights reserved. Built with pride for families everywhere.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       JAVASCRIPT: CLIENT-SIDE LOGIC, TEMPLATES, AUTOSAVE & EXPORTS
+       ========================================================================== -->
+  <script>
+    (function () {
+      'use strict';
+
+      // -------------------------------------------------------------------------
+      // 1. DICTIONARIES & TRANSLATIONS (ENGLISH & HINDI DEVANAGARI)
+      // -------------------------------------------------------------------------
+      var TRANSLATIONS = {
+        en: {
+          biodataTitle: "MARRIAGE BIODATA",
+          secPersonal: "Personal Details",
+          secFaith: "Kundali & Faith Details",
+          secEducation: "Education & Career",
+          secFamily: "Family Background",
+          secContact: "Contact Details",
+          secExpectations: "Partner Expectations",
+          name: "Full Name",
+          dob: "Date of Birth",
+          birthTime: "Birth Time",
+          birthPlace: "Birth Place",
+          height: "Height",
+          weight: "Weight",
+          complexion: "Complexion",
+          bloodGroup: "Blood Group",
+          maritalStatus: "Marital Status",
+          motherTongue: "Mother Tongue",
+          religion: "Religion",
+          caste: "Caste / Sub-caste",
+          gotra: "Gotra",
+          rashi: "Rashi (Moon Sign)",
+          nakshatra: "Nakshatra",
+          manglik: "Manglik Status",
+          kuldevta: "Kuldevta / Deity",
+          sect: "Sect / Maslak",
+          namaz: "Namaz / Religious Routine",
+          denomination: "Denomination",
+          church: "Parish / Church",
+          amritdhari: "Amritdhari Status",
+          sampradaya: "Sampradaya",
+          education: "Highest Qualification",
+          college: "College / University",
+          occupation: "Occupation",
+          company: "Company / Firm",
+          income: "Annual Income",
+          fatherName: "Father's Name",
+          fatherOcc: "Father's Occupation",
+          motherName: "Mother's Name",
+          motherOcc: "Mother's Occupation",
+          siblings: "Siblings",
+          familyType: "Family Type",
+          familyStatus: "Family Status",
+          nativePlace: "Native Place",
+          address: "Current Address",
+          phone: "Contact Phone",
+          email: "Email Address",
+          confidentialNote: "Generated privately via Biodata Maker • Strictly confidential for matrimonial matchmaking"
+        },
+        hi: {
+          biodataTitle: "विवाह बायोडाटा",
+          secPersonal: "व्यक्तिगत विवरण",
+          secFaith: "कुंडली एवं धार्मिक विवरण",
+          secEducation: "शिक्षा एवं व्यवसाय",
+          secFamily: "पारिवारिक विवरण",
+          secContact: "संपर्क सूत्र",
+          secExpectations: "जीवनसाथी से अपेक्षाएं",
+          name: "पूरा नाम",
+          dob: "जन्म तिथि",
+          birthTime: "जन्म समय",
+          birthPlace: "जन्म स्थान",
+          height: "ऊँचाई / कद",
+          weight: "वजन",
+          complexion: "वर्ण / रंग",
+          bloodGroup: "रक्त समूह",
+          maritalStatus: "वैवाहिक स्थिति",
+          motherTongue: "मातृभाषा",
+          religion: "धर्म",
+          caste: "जाति / उपजाति",
+          gotra: "गोत्र",
+          rashi: "राशि",
+          nakshatra: "नक्षत्र",
+          manglik: "मांगलिक स्थिति",
+          kuldevta: "कुलदेवता",
+          sect: "मसलक / संप्रदाय",
+          namaz: "नमाज़ / धार्मिक दिनचर्या",
+          denomination: "चर्च संप्रदाय",
+          church: "पैरिश / चर्च",
+          amritdhari: "अमृतधारी",
+          sampradaya: "संप्रदाय",
+          education: "उच्चतम शिक्षा",
+          college: "कॉलेज / विश्वविद्यालय",
+          occupation: "व्यवसाय / कार्य",
+          company: "कंपनी / संस्थान",
+          income: "वार्षिक आय",
+          fatherName: "पिता का नाम",
+          fatherOcc: "पिता का व्यवसाय",
+          motherName: "माता का नाम",
+          motherOcc: "माता का व्यवसाय",
+          siblings: "भाई-बहन",
+          familyType: "परिवार का प्रकार",
+          familyStatus: "पारिवारिक स्थिति",
+          nativePlace: "मूल निवास",
+          address: "वर्तमान पता",
+          phone: "संपर्क नंबर",
+          email: "ईमेल पता",
+          confidentialNote: "बायोडाटा मेकर द्वारा निर्मित • केवल वैवाहिक उपयोग हेतु गोपनीय"
+        }
+      };
+
+      // -------------------------------------------------------------------------
+      // 2. COMMUNITY PRESETS CONFIGURATION
+      // -------------------------------------------------------------------------
+      var PRESET_CONFIGS = {
+        hindu: {
+          defaultBlessing: "॥ श्री गणेशाय नमः ॥",
+          religion: "Hindu",
+          faithFields: [
+            { id: "inp-gotra", label: "Gotra", placeholder: "e.g. Bharadwaj / Kashyap" },
+            { id: "inp-rashi", label: "Rashi (Moon Sign)", placeholder: "e.g. Mesh (Aries) / Vrishabh" },
+            { id: "inp-nakshatra", label: "Nakshatra", placeholder: "e.g. Rohini / Ashwini" },
+            { id: "inp-manglik", label: "Manglik Status", type: "select", options: ["Non-Manglik", "Manglik", "Anshik (Partial) Manglik", "Don't Know"] },
+            { id: "inp-kuldevta", label: "Kuldevta / Deity (Optional)", placeholder: "e.g. Kuldevi Chamunda Mata" }
+          ]
+        },
+        muslim: {
+          defaultBlessing: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+          religion: "Muslim",
+          faithFields: [
+            { id: "inp-sect", label: "Sect / Maslak (Optional)", placeholder: "e.g. Sunni / Shia / Hanafi" },
+            { id: "inp-namaz", label: "Religious Routine (Optional)", placeholder: "e.g. 5 times Namaz, Quran reciter" }
+          ]
+        },
+        christian: {
+          defaultBlessing: "✝ In God's Grace",
+          religion: "Christian",
+          faithFields: [
+            { id: "inp-denomination", label: "Denomination", placeholder: "e.g. Roman Catholic / Protestant / CSI" },
+            { id: "inp-church", label: "Parish / Church (Optional)", placeholder: "e.g. St. Thomas Church, Bangalore" }
+          ]
+        },
+        sikh: {
+          defaultBlessing: "ੴ ਸਤਿਗੁਰ ਪ੍ਰਸाਦਿ ॥",
+          religion: "Sikh",
+          faithFields: [
+            { id: "inp-gotra", label: "Gotra / Caste", placeholder: "e.g. Khatri / Arora / Jat Sikh" },
+            { id: "inp-amritdhari", label: "Amritdhari Status (Optional)", type: "select", options: ["Amritdhari", "Keshdhari (Sahajdhari)", "Non-Amritdhari"] }
+          ]
+        },
+        jain: {
+          defaultBlessing: "॥ ॐ अर्हं नमः ॥",
+          religion: "Jain",
+          faithFields: [
+            { id: "inp-sampradaya", label: "Sampradaya", placeholder: "e.g. Digambar (Bispanthi) / Shwetambar" },
+            { id: "inp-gotra", label: "Gotra", placeholder: "e.g. Goyal / Singhal" },
+            { id: "inp-manglik", label: "Manglik Status", type: "select", options: ["Non-Manglik", "Manglik", "Don't Know"] }
+          ]
+        },
+        buddhist: {
+          defaultBlessing: "॥ नमो बुद्धाय ॥",
+          religion: "Buddhist",
+          faithFields: [
+            { id: "inp-gotra", label: "Sub-group / Branch (Optional)", placeholder: "e.g. Navayana / Theravada" }
+          ]
+        },
+        other: {
+          defaultBlessing: "",
+          religion: "",
+          faithFields: []
+        }
+      };
+
+      // -------------------------------------------------------------------------
+      // 3. SAMPLE DEMO DATA (Fictional, Clearly a Matrimonial Sample)
+      // -------------------------------------------------------------------------
+      var SAMPLE_DATA = {
+        template: "tpl-classic",
+        community: "hindu",
+        lang: "en",
+        blessing: "॥ श्री गणेशाय नमः ॥",
+        fullname: "Aarav Sharma",
+        dob: "1997-04-14",
+        birthtime: "06:45 AM",
+        birthplace: "Jaipur, Rajasthan",
+        height: "5 ft 10 in (178 cm)",
+        weight: "70 kg",
+        complexion: "Fair",
+        bloodgroup: "B+",
+        marital: "Never Married",
+        mothertongue: "Hindi",
+        religion: "Hindu",
+        caste: "Brahmin (Gour)",
+        gotra: "Bharadwaj",
+        rashi: "Kanya (Virgo)",
+        nakshatra: "Hasta",
+        manglik: "Non-Manglik",
+        kuldevta: "Shri Mahadev Ji",
+        education: "B.Tech in Computer Science & Engineering",
+        college: "Delhi Technological University (DTU)",
+        occupation: "Lead Software Architect",
+        company: "Google / Multinational Tech, Bangalore",
+        income: "₹32 Lakhs per annum",
+        fathername: "Shri Rajesh Sharma",
+        fatherocc: "Senior Divisional Manager (Retd., Nationalised Bank)",
+        mothername: "Smt. Sunita Sharma",
+        motherocc: "Homemaker",
+        siblings: "1 Elder Brother (Married, Architect in Mumbai)",
+        familytype: "Nuclear Family",
+        familystatus: "Upper Middle Class, Traditional yet Modern Values",
+        nativeplace: "Jaipur, Rajasthan",
+        address: "Flat 402, Lotus Tower, Indiranagar, Bangalore, Karnataka - 560038",
+        phone: "+91 98765 43210 / +91 91234 56789",
+        email: "family.sharma.matrimony@example.com",
+        expectations: "Seeking a well-educated, cultured, and family-oriented partner with cheerful disposition. She should appreciate mutual respect, family values, and work-life balance. Working professionals are heartily welcome."
+      };
+
+      // -------------------------------------------------------------------------
+      // 4. DOM ELEMENTS CACHE
+      // -------------------------------------------------------------------------
+      var presetSelect = document.getElementById('community-preset');
+      var langSelect = document.getElementById('label-lang');
+      var blessingInput = document.getElementById('header-blessing');
+      var templateBtns = document.querySelectorAll('.template-card-btn');
+      var faithFieldsBox = document.getElementById('faith-fields-container');
+      var autosaveBadge = document.getElementById('autosave-indicator');
+      var photoInput = document.getElementById('photo-input');
+      var photoThumb = document.getElementById('photo-thumb');
+      var photoThumbContainer = document.getElementById('photo-thumb-container');
+      var btnRemovePhoto = document.getElementById('btn-remove-photo');
+      var previewSheet = document.getElementById('biodata-preview');
+      var pvPhotoFrame = document.getElementById('pv-photo-frame');
+      var pvPhotoImg = document.getElementById('pv-photo-img');
+      var pvPhotoPlaceholder = document.getElementById('pv-photo-placeholder');
+
+      var currentPhotoDataUrl = "";
+      var currentTemplate = "tpl-classic";
+
+      // -------------------------------------------------------------------------
+      // 5. RENDER FAITH FIELDS BASED ON PRESET
+      // -------------------------------------------------------------------------
+      function renderFaithFields(presetKey, savedValues) {
+        savedValues = savedValues || {};
+        var config = PRESET_CONFIGS[presetKey] || PRESET_CONFIGS.other;
+        faithFieldsBox.innerHTML = "";
+
+        if (!config.faithFields || config.faithFields.length === 0) {
+          faithFieldsBox.style.display = "none";
+          return;
+        }
+
+        faithFieldsBox.style.display = "block";
+        var title = document.createElement('div');
+        title.className = "field-label";
+        title.style.marginBottom = "8px";
+        title.textContent = "Community & Faith Details";
+        faithFieldsBox.appendChild(title);
+
+        var grid = document.createElement('div');
+        grid.className = "form-row-2";
+
+        config.faithFields.forEach(function (f) {
+          var group = document.createElement('div');
+          group.className = "field-group";
+
+          var label = document.createElement('label');
+          label.className = "field-label";
+          label.htmlFor = f.id;
+          label.textContent = f.label;
+          group.appendChild(label);
+
+          if (f.type === "select") {
+            var select = document.createElement('select');
+            select.id = f.id;
+            select.className = "select-input";
+            f.options.forEach(function (opt) {
+              var optEl = document.createElement('option');
+              optEl.value = opt;
+              optEl.textContent = opt;
+              select.appendChild(optEl);
+            });
+            if (savedValues[f.id]) select.value = savedValues[f.id];
+            select.addEventListener('change', onFormChange);
+            group.appendChild(select);
+          } else {
+            var input = document.createElement('input');
+            input.type = "text";
+            input.id = f.id;
+            input.className = "text-input";
+            input.placeholder = f.placeholder || "";
+            if (savedValues[f.id]) input.value = savedValues[f.id];
+            input.addEventListener('input', onFormChange);
+            group.appendChild(input);
+          }
+
+          grid.appendChild(group);
+        });
+
+        faithFieldsBox.appendChild(grid);
+      }
+
+      // -------------------------------------------------------------------------
+      // 6. HELPER TO GET VALUE OF ELEMENT SAFELY
+      // -------------------------------------------------------------------------
+      function val(id) {
+        var el = document.getElementById(id);
+        return el ? (el.value || "").trim() : "";
+      }
+
+      function setVal(id, value) {
+        var el = document.getElementById(id);
+        if (el) el.value = value || "";
+      }
+
+      // -------------------------------------------------------------------------
+      // 7. FORMAT BIRTH DATE PRETTILY
+      // -------------------------------------------------------------------------
+      function formatDate(dobStr) {
+        if (!dobStr) return "";
+        try {
+          var parts = dobStr.split("-");
+          if (parts.length === 3) {
+            var y = parseInt(parts[0], 10);
+            var m = parseInt(parts[1], 10) - 1;
+            var d = parseInt(parts[2], 10);
+            var date = new Date(y, m, d);
+            var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+            return d + " " + months[m] + " " + y;
+          }
+        } catch (e) {}
+        return dobStr;
+      }
+
+      // -------------------------------------------------------------------------
+      // 8. UPDATE LIVE PREVIEW (Debounced / Keystroke)
+      // -------------------------------------------------------------------------
+      function updatePreview() {
+        var lang = langSelect.value || "en";
+        var t = TRANSLATIONS[lang] || TRANSLATIONS.en;
+
+        // Top blessing line & title
+        var blessingText = blessingInput.value.trim();
+        var pvBlessing = document.getElementById('pv-heading-quote');
+        if (blessingText) {
+          pvBlessing.textContent = blessingText;
+          pvBlessing.style.display = "block";
+        } else {
+          pvBlessing.style.display = "none";
+        }
+
+        document.getElementById('pv-title').textContent = t.biodataTitle;
+
+        // Candidate Profile
+        var name = val('inp-fullname') || (lang === 'hi' ? "नाम यहाँ दिखेगा" : "Candidate Name");
+        document.getElementById('pv-fullname').textContent = name;
+
+        var occ = val('inp-occupation');
+        var edu = val('inp-education');
+        var sublineParts = [];
+        if (occ) sublineParts.push(occ);
+        if (edu) sublineParts.push(edu);
+        var sublineEl = document.getElementById('pv-subline');
+        if (sublineParts.length > 0) {
+          sublineEl.textContent = sublineParts.join(" • ");
+          sublineEl.style.display = "block";
+        } else {
+          sublineEl.style.display = "none";
+        }
+
+        // Photo Preview Frame
+        if (currentPhotoDataUrl) {
+          pvPhotoImg.src = currentPhotoDataUrl;
+          pvPhotoImg.style.display = "block";
+          pvPhotoPlaceholder.style.display = "none";
+          pvPhotoFrame.style.display = "flex";
+        } else {
+          pvPhotoImg.style.display = "none";
+          pvPhotoPlaceholder.style.display = "block";
+          pvPhotoFrame.style.display = "flex";
+        }
+
+        // Helper to append a key-value row if value exists
+        function addRow(grid, labelText, valueText, isFullWidth) {
+          if (!valueText) return false;
+          var row = document.createElement('div');
+          row.className = isFullWidth ? "sheet-full-row" : "sheet-row";
+
+          var lbl = document.createElement('div');
+          lbl.className = "sheet-label";
+          lbl.textContent = labelText;
+
+          var colon = document.createElement('div');
+          colon.className = "sheet-colon";
+          colon.textContent = ":";
+
+          var valDiv = document.createElement('div');
+          valDiv.className = "sheet-val";
+          valDiv.textContent = valueText;
+
+          row.appendChild(lbl);
+          row.appendChild(colon);
+          row.appendChild(valDiv);
+          grid.appendChild(row);
+          return true;
+        }
+
+        // --- SECTION 1: PERSONAL DETAILS ---
+        document.getElementById('pv-lbl-sec-personal').textContent = t.secPersonal;
+        var gridPersonal = document.getElementById('pv-grid-personal');
+        gridPersonal.innerHTML = "";
+        var countPersonal = 0;
+
+        if (addRow(gridPersonal, t.dob, formatDate(val('inp-dob')))) countPersonal++;
+        if (addRow(gridPersonal, t.birthTime, val('inp-birthtime'))) countPersonal++;
+        if (addRow(gridPersonal, t.birthPlace, val('inp-birthplace'))) countPersonal++;
+        if (addRow(gridPersonal, t.height, val('inp-height'))) countPersonal++;
+        if (addRow(gridPersonal, t.weight, val('inp-weight'))) countPersonal++;
+        if (addRow(gridPersonal, t.complexion, val('inp-complexion'))) countPersonal++;
+        if (addRow(gridPersonal, t.bloodGroup, val('inp-bloodgroup'))) countPersonal++;
+        if (addRow(gridPersonal, t.maritalStatus, val('inp-marital'))) countPersonal++;
+        if (addRow(gridPersonal, t.religion, val('inp-religion'))) countPersonal++;
+        if (addRow(gridPersonal, t.caste, val('inp-caste'))) countPersonal++;
+        if (addRow(gridPersonal, t.motherTongue, val('inp-mothertongue'))) countPersonal++;
+
+        document.getElementById('pv-sec-personal').style.display = countPersonal > 0 ? "flex" : "none";
+
+        // --- SECTION 2: FAITH & KUNDALI DETAILS (DYNAMIC) ---
+        document.getElementById('pv-lbl-sec-faith').textContent = t.secFaith;
+        var gridFaith = document.getElementById('pv-grid-faith');
+        gridFaith.innerHTML = "";
+        var countFaith = 0;
+
+        if (addRow(gridFaith, t.gotra, val('inp-gotra'))) countFaith++;
+        if (addRow(gridFaith, t.rashi, val('inp-rashi'))) countFaith++;
+        if (addRow(gridFaith, t.nakshatra, val('inp-nakshatra'))) countFaith++;
+        if (addRow(gridFaith, t.manglik, val('inp-manglik'))) countFaith++;
+        if (addRow(gridFaith, t.kuldevta, val('inp-kuldevta'))) countFaith++;
+        if (addRow(gridFaith, t.sect, val('inp-sect'))) countFaith++;
+        if (addRow(gridFaith, t.namaz, val('inp-namaz'))) countFaith++;
+        if (addRow(gridFaith, t.denomination, val('inp-denomination'))) countFaith++;
+        if (addRow(gridFaith, t.church, val('inp-church'))) countFaith++;
+        if (addRow(gridFaith, t.amritdhari, val('inp-amritdhari'))) countFaith++;
+        if (addRow(gridFaith, t.sampradaya, val('inp-sampradaya'))) countFaith++;
+
+        document.getElementById('pv-sec-faith').style.display = countFaith > 0 ? "flex" : "none";
+
+        // --- SECTION 3: EDUCATION & WORK ---
+        document.getElementById('pv-lbl-sec-education').textContent = t.secEducation;
+        var gridEdu = document.getElementById('pv-grid-education');
+        gridEdu.innerHTML = "";
+        var countEdu = 0;
+
+        if (addRow(gridEdu, t.education, val('inp-education'), true)) countEdu++;
+        if (addRow(gridEdu, t.college, val('inp-college'), true)) countEdu++;
+        if (addRow(gridEdu, t.occupation, val('inp-occupation'))) countEdu++;
+        if (addRow(gridEdu, t.company, val('inp-company'))) countEdu++;
+        if (addRow(gridEdu, t.income, val('inp-income'), true)) countEdu++;
+
+        document.getElementById('pv-sec-education').style.display = countEdu > 0 ? "flex" : "none";
+
+        // --- SECTION 4: FAMILY DETAILS ---
+        document.getElementById('pv-lbl-sec-family').textContent = t.secFamily;
+        var gridFam = document.getElementById('pv-grid-family');
+        gridFam.innerHTML = "";
+        var countFam = 0;
+
+        if (addRow(gridFam, t.fatherName, val('inp-fathername'))) countFam++;
+        if (addRow(gridFam, t.fatherOcc, val('inp-fatherocc'))) countFam++;
+        if (addRow(gridFam, t.motherName, val('inp-mothername'))) countFam++;
+        if (addRow(gridFam, t.motherOcc, val('inp-motherocc'))) countFam++;
+        if (addRow(gridFam, t.siblings, val('inp-siblings'), true)) countFam++;
+        if (addRow(gridFam, t.familyType, val('inp-familytype'))) countFam++;
+        if (addRow(gridFam, t.familyStatus, val('inp-familystatus'))) countFam++;
+        if (addRow(gridFam, t.nativePlace, val('inp-nativeplace'), true)) countFam++;
+
+        document.getElementById('pv-sec-family').style.display = countFam > 0 ? "flex" : "none";
+
+        // --- SECTION 5: CONTACT DETAILS ---
+        document.getElementById('pv-lbl-sec-contact').textContent = t.secContact;
+        var gridContact = document.getElementById('pv-grid-contact');
+        gridContact.innerHTML = "";
+        var countContact = 0;
+
+        if (addRow(gridContact, t.address, val('inp-address'), true)) countContact++;
+        if (addRow(gridContact, t.phone, val('inp-phone'))) countContact++;
+        if (addRow(gridContact, t.email, val('inp-email'))) countContact++;
+
+        document.getElementById('pv-sec-contact').style.display = countContact > 0 ? "flex" : "none";
+
+        // --- SECTION 6: PARTNER EXPECTATIONS ---
+        document.getElementById('pv-lbl-sec-expectations').textContent = t.secExpectations;
+        var expVal = val('inp-expectations');
+        var expBox = document.getElementById('pv-sec-expectations');
+        if (expVal) {
+          document.getElementById('pv-val-expectations').textContent = expVal;
+          expBox.style.display = "flex";
+        } else {
+          expBox.style.display = "none";
+        }
+
+        // WhatsApp Share prefilled link
+        updateWhatsAppLink();
+      }
+
+      // -------------------------------------------------------------------------
+      // 9. WHATSAPP SHARE BUTTON PREPARATION
+      // (Worded strictly as required: the user attaches the downloaded image themselves)
+      // -------------------------------------------------------------------------
+      function updateWhatsAppLink() {
+        var name = val('inp-fullname') || "my candidate";
+        var msg = "Hello! Here is the marriage biodata for " + name + " (the user attaches the downloaded image themselves). Created via Biodata Maker.";
+        var waUrl = "https://wa.me/?text=" + encodeURIComponent(msg);
+        var waBtn = document.getElementById('btn-whatsapp-share');
+        if (waBtn) waBtn.href = waUrl;
+      }
+
+      // -------------------------------------------------------------------------
+      // 10. LOCAL STORAGE AUTOSAVE & RESTORE
+      // -------------------------------------------------------------------------
+      var STORAGE_KEY = "biodata_maker_draft_v1";
+
+      function collectFormData() {
+        return {
+          template: currentTemplate,
+          preset: presetSelect.value,
+          lang: langSelect.value,
+          blessing: blessingInput.value,
+          fullname: val('inp-fullname'),
+          dob: val('inp-dob'),
+          birthtime: val('inp-birthtime'),
+          birthplace: val('inp-birthplace'),
+          height: val('inp-height'),
+          weight: val('inp-weight'),
+          complexion: val('inp-complexion'),
+          bloodgroup: val('inp-bloodgroup'),
+          marital: val('inp-marital'),
+          mothertongue: val('inp-mothertongue'),
+          religion: val('inp-religion'),
+          caste: val('inp-caste'),
+          gotra: val('inp-gotra'),
+          rashi: val('inp-rashi'),
+          nakshatra: val('inp-nakshatra'),
+          manglik: val('inp-manglik'),
+          kuldevta: val('inp-kuldevta'),
+          sect: val('inp-sect'),
+          namaz: val('inp-namaz'),
+          denomination: val('inp-denomination'),
+          church: val('inp-church'),
+          amritdhari: val('inp-amritdhari'),
+          sampradaya: val('inp-sampradaya'),
+          education: val('inp-education'),
+          college: val('inp-college'),
+          occupation: val('inp-occupation'),
+          company: val('inp-company'),
+          income: val('inp-income'),
+          fathername: val('inp-fathername'),
+          fatherocc: val('inp-fatherocc'),
+          mothername: val('inp-mothername'),
+          motherocc: val('inp-motherocc'),
+          siblings: val('inp-siblings'),
+          familytype: val('inp-familytype'),
+          familystatus: val('inp-familystatus'),
+          nativeplace: val('inp-nativeplace'),
+          address: val('inp-address'),
+          phone: val('inp-phone'),
+          email: val('inp-email'),
+          expectations: val('inp-expectations'),
+          photo: currentPhotoDataUrl
+        };
+      }
+
+      var saveDebounceTimer = null;
+      function onFormChange() {
+        updatePreview();
+        clearTimeout(saveDebounceTimer);
+        saveDebounceTimer = setTimeout(function () {
+          try {
+            var data = collectFormData();
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+            if (autosaveBadge) {
+              autosaveBadge.textContent = "✓ Saved to browser";
+              autosaveBadge.style.opacity = "1";
+            }
+          } catch (e) {
+            // If quota exceeded due to large photo, save without photo
+            try {
+              var fallback = collectFormData();
+              fallback.photo = "";
+              localStorage.setItem(STORAGE_KEY, JSON.stringify(fallback));
+            } catch (err) {}
+          }
+        }, 300);
+      }
+
+      function populateFormData(d) {
+        if (!d) return;
+
+        if (d.template) {
+          applyTemplate(d.template);
+        }
+        if (d.preset) {
+          presetSelect.value = d.preset;
+          renderFaithFields(d.preset, {
+            "inp-gotra": d.gotra,
+            "inp-rashi": d.rashi,
+            "inp-nakshatra": d.nakshatra,
+            "inp-manglik": d.manglik,
+            "inp-kuldevta": d.kuldevta,
+            "inp-sect": d.sect,
+            "inp-namaz": d.namaz,
+            "inp-denomination": d.denomination,
+            "inp-church": d.church,
+            "inp-amritdhari": d.amritdhari,
+            "inp-sampradaya": d.sampradaya
+          });
+        }
+        if (d.lang) langSelect.value = d.lang;
+        if (d.blessing !== undefined) blessingInput.value = d.blessing;
+
+        setVal('inp-fullname', d.fullname);
+        setVal('inp-dob', d.dob);
+        setVal('inp-birthtime', d.birthtime);
+        setVal('inp-birthplace', d.birthplace);
+        setVal('inp-height', d.height);
+        setVal('inp-weight', d.weight);
+        setVal('inp-complexion', d.complexion);
+        setVal('inp-bloodgroup', d.bloodgroup);
+        setVal('inp-marital', d.marital);
+        setVal('inp-mothertongue', d.mothertongue);
+        setVal('inp-religion', d.religion);
+        setVal('inp-caste', d.caste);
+
+        // Faith fields
+        setVal('inp-gotra', d.gotra);
+        setVal('inp-rashi', d.rashi);
+        setVal('inp-nakshatra', d.nakshatra);
+        setVal('inp-manglik', d.manglik);
+        setVal('inp-kuldevta', d.kuldevta);
+        setVal('inp-sect', d.sect);
+        setVal('inp-namaz', d.namaz);
+        setVal('inp-denomination', d.denomination);
+        setVal('inp-church', d.church);
+        setVal('inp-amritdhari', d.amritdhari);
+        setVal('inp-sampradaya', d.sampradaya);
+
+        setVal('inp-education', d.education);
+        setVal('inp-college', d.college);
+        setVal('inp-occupation', d.occupation);
+        setVal('inp-company', d.company);
+        setVal('inp-income', d.income);
+
+        setVal('inp-fathername', d.fathername);
+        setVal('inp-fatherocc', d.fatherocc);
+        setVal('inp-mothername', d.mothername);
+        setVal('inp-motherocc', d.motherocc);
+        setVal('inp-siblings', d.siblings);
+        setVal('inp-familytype', d.familytype);
+        setVal('inp-familystatus', d.familystatus);
+        setVal('inp-nativeplace', d.nativeplace);
+
+        setVal('inp-address', d.address);
+        setVal('inp-phone', d.phone);
+        setVal('inp-email', d.email);
+        setVal('inp-expectations', d.expectations);
+
+        if (d.photo) {
+          currentPhotoDataUrl = d.photo;
+          photoThumb.src = d.photo;
+          photoThumbContainer.style.display = "block";
+          btnRemovePhoto.style.display = "inline-block";
+        }
+
+        updatePreview();
+      }
+
+      // -------------------------------------------------------------------------
+      // 11. TEMPLATE SWITCHING (10 Distinct Templates)
+      // -------------------------------------------------------------------------
+      var TEMPLATE_CLASSES = [
+        "tpl-classic", "tpl-royal-maroon", "tpl-golden-frame", "tpl-elegant-minimal",
+        "tpl-traditional-hindu", "tpl-muslim-green", "tpl-christian-grace",
+        "tpl-sikh-heritage", "tpl-floral", "tpl-modern-clean"
+      ];
+
+      function applyTemplate(tplName) {
+        currentTemplate = tplName;
+        TEMPLATE_CLASSES.forEach(function (c) {
+          previewSheet.classList.remove(c);
+        });
+        previewSheet.classList.add(tplName);
+
+        templateBtns.forEach(function (btn) {
+          if (btn.getAttribute('data-tpl') === tplName) {
+            btn.classList.add('active');
+          } else {
+            btn.classList.remove('active');
+          }
+        });
+      }
+
+      templateBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var tpl = btn.getAttribute('data-tpl');
+          applyTemplate(tpl);
+          onFormChange();
+        });
+      });
+
+      // -------------------------------------------------------------------------
+      // 12. EVENT LISTENERS: PRESET & LANGUAGE CHANGE
+      // -------------------------------------------------------------------------
+      presetSelect.addEventListener('change', function () {
+        var preset = presetSelect.value;
+        var cfg = PRESET_CONFIGS[preset] || PRESET_CONFIGS.other;
+
+        // Auto-set the top blessing if user hasn't typed custom or if switching presets
+        if (cfg.defaultBlessing !== undefined) {
+          blessingInput.value = cfg.defaultBlessing;
+        }
+        if (cfg.religion && !val('inp-religion')) {
+          setVal('inp-religion', cfg.religion);
+        }
+
+        renderFaithFields(preset);
+        onFormChange();
+      });
+
+      langSelect.addEventListener('change', onFormChange);
+      blessingInput.addEventListener('input', onFormChange);
+
+      // Listen to all inputs inside the biodata form
+      var biodataForm = document.getElementById('biodata-form');
+      biodataForm.addEventListener('input', onFormChange);
+      biodataForm.addEventListener('change', onFormChange);
+
+      // -------------------------------------------------------------------------
+      // 13. PHOTO UPLOAD (Local FileReader — Client-Side Only)
+      // -------------------------------------------------------------------------
+      photoInput.addEventListener('change', function (e) {
+        var file = e.target.files && e.target.files[0];
+        if (!file) return;
+
+        // Read locally via FileReader
+        var reader = new FileReader();
+        reader.onload = function (evt) {
+          // Downscale slightly on a local canvas to keep localStorage snappy & memory light
+          var img = new Image();
+          img.onload = function () {
+            var maxDim = 800;
+            var w = img.width;
+            var h = img.height;
+            if (w > maxDim || h > maxDim) {
+              if (w > h) {
+                h = Math.round((h * maxDim) / w);
+                w = maxDim;
+              } else {
+                w = Math.round((w * maxDim) / h);
+                h = maxDim;
+              }
+            }
+            var canvas = document.createElement('canvas');
+            canvas.width = w;
+            canvas.height = h;
+            var ctx = canvas.getContext('2d');
+            ctx.drawImage(img, 0, 0, w, h);
+            currentPhotoDataUrl = canvas.toDataURL('image/jpeg', 0.88);
+
+            photoThumb.src = currentPhotoDataUrl;
+            photoThumbContainer.style.display = "block";
+            btnRemovePhoto.style.display = "inline-block";
+            onFormChange();
+          };
+          img.src = evt.target.result;
+        };
+        reader.readAsDataURL(file);
+      });
+
+      btnRemovePhoto.addEventListener('click', function () {
+        currentPhotoDataUrl = "";
+        photoInput.value = "";
+        photoThumb.src = "";
+        photoThumbContainer.style.display = "none";
+        btnRemovePhoto.style.display = "none";
+        onFormChange();
+      });
+
+      // -------------------------------------------------------------------------
+      // 14. "SEE A SAMPLE" & "CLEAR ALL" BUTTONS
+      // -------------------------------------------------------------------------
+      document.getElementById('btn-sample-data').addEventListener('click', function () {
+        populateFormData(SAMPLE_DATA);
+        onFormChange();
+        window.scrollTo({ top: 320, behavior: 'smooth' });
+      });
+
+      document.getElementById('btn-clear-all').addEventListener('click', function () {
+        if (confirm("Are you sure you want to clear all biodata details? This cannot be undone.")) {
+          localStorage.removeItem(STORAGE_KEY);
+          biodataForm.reset();
+          currentPhotoDataUrl = "";
+          photoThumb.src = "";
+          photoThumbContainer.style.display = "none";
+          btnRemovePhoto.style.display = "none";
+          blessingInput.value = "";
+          renderFaithFields(presetSelect.value);
+          updatePreview();
+        }
+      });
+
+      // -------------------------------------------------------------------------
+      // 14b. PREVIEW ZOOM / SCALE HANDLING (Mobile & Desktop Responsive)
+      // -------------------------------------------------------------------------
+      var isFitMode = true;
+      var scalerEl = document.querySelector('.biodata-sheet-scaler');
+      var btnZoomFit = document.getElementById('btn-zoom-fit');
+      var btnZoom100 = document.getElementById('btn-zoom-100');
+
+      function applyPreviewScale() {
+        if (!scalerEl || !previewSheet) return;
+        var wrapper = document.querySelector('.preview-canvas-wrapper');
+        if (!wrapper) return;
+
+        if (!isFitMode) {
+          scalerEl.style.width = "794px";
+          scalerEl.style.height = "1123px";
+          previewSheet.style.transform = "none";
+          previewSheet.style.transformOrigin = "top center";
+          if (btnZoom100) btnZoom100.style.fontWeight = "700";
+          if (btnZoomFit) btnZoomFit.style.fontWeight = "normal";
+          return;
+        }
+
+        var availW = wrapper.clientWidth - 24;
+        if (availW <= 0) availW = 360;
+        var s = Math.min(1, availW / 794);
+        scalerEl.style.width = Math.round(794 * s) + "px";
+        scalerEl.style.height = Math.round(1123 * s) + "px";
+        previewSheet.style.transform = "scale(" + s + ")";
+        previewSheet.style.transformOrigin = "top left";
+        if (btnZoomFit) btnZoomFit.style.fontWeight = "700";
+        if (btnZoom100) btnZoom100.style.fontWeight = "normal";
+      }
+
+      if (btnZoomFit) {
+        btnZoomFit.addEventListener('click', function () {
+          isFitMode = true;
+          applyPreviewScale();
+        });
+      }
+      if (btnZoom100) {
+        btnZoom100.addEventListener('click', function () {
+          isFitMode = false;
+          applyPreviewScale();
+        });
+      }
+      window.addEventListener('resize', function () {
+        if (isFitMode) applyPreviewScale();
+      });
+
+      // -------------------------------------------------------------------------
+      // 15. DOWNLOAD PDF & DOWNLOAD IMAGE (JPG) + FALLBACK
+      // -------------------------------------------------------------------------
+      var btnDownloadPdf = document.getElementById('btn-download-pdf');
+      var btnDownloadImg = document.getElementById('btn-download-img');
+
+      function generateCanvas(callback) {
+        // Check if html2canvas is loaded
+        if (typeof window.html2canvas !== 'function') {
+          alert("Document renderer is loading or offline. Opening print dialog to Save as PDF.");
+          window.print();
+          return;
+        }
+
+        var origBtnText = btnDownloadPdf.innerHTML;
+        btnDownloadPdf.innerHTML = "Rendering...";
+        btnDownloadPdf.disabled = true;
+        btnDownloadImg.disabled = true;
+
+        // Temporarily reset previewSheet transform so html2canvas renders exact unscaled 794x1123
+        var prevTransform = previewSheet.style.transform;
+        var prevOrigin = previewSheet.style.transformOrigin;
+        previewSheet.style.transform = "none";
+        previewSheet.style.transformOrigin = "top left";
+
+        var target = previewSheet;
+
+        window.html2canvas(target, {
+          scale: 2, // High resolution for crisp printing and WhatsApp readability
+          useCORS: true,
+          allowTaint: true,
+          backgroundColor: "#ffffff",
+          logging: false
+        }).then(function (canvas) {
+          previewSheet.style.transform = prevTransform;
+          previewSheet.style.transformOrigin = prevOrigin;
+          btnDownloadPdf.innerHTML = origBtnText;
+          btnDownloadPdf.disabled = false;
+          btnDownloadImg.disabled = false;
+          callback(null, canvas);
+        }).catch(function (err) {
+          previewSheet.style.transform = prevTransform;
+          previewSheet.style.transformOrigin = prevOrigin;
+          btnDownloadPdf.innerHTML = origBtnText;
+          btnDownloadPdf.disabled = false;
+          btnDownloadImg.disabled = false;
+          console.error("Canvas render error:", err);
+          callback(err, null);
+        });
+      }
+
+      // Route A: Download PDF via jsPDF (or print fallback)
+      btnDownloadPdf.addEventListener('click', function () {
+        generateCanvas(function (err, canvas) {
+          if (err || !canvas) {
+            window.print();
+            return;
+          }
+
+          try {
+            // Check jsPDF
+            var jspdfLib = window.jspdf ? window.jspdf.jsPDF : window.jsPDF;
+            if (!jspdfLib) {
+              window.print();
+              return;
+            }
+
+            var pdf = new jspdfLib({
+              orientation: 'portrait',
+              unit: 'mm',
+              format: 'a4'
+            });
+
+            var imgData = canvas.toDataURL('image/jpeg', 0.95);
+            // Standard A4: 210 x 297 mm
+            pdf.addImage(imgData, 'JPEG', 0, 0, 210, 297);
+
+            var candidateName = val('inp-fullname') || "Biodata";
+            var cleanFileName = candidateName.replace(/[^a-zA-Z0-9_-]/g, "_") + "_Marriage_Biodata.pdf";
+            pdf.save(cleanFileName);
+          } catch (e) {
+            console.warn("jsPDF failed, falling back to print window:", e);
+            window.print();
+          }
+        });
+      });
+
+      // Route B: Download Image (JPG) for WhatsApp
+      btnDownloadImg.addEventListener('click', function () {
+        generateCanvas(function (err, canvas) {
+          if (err || !canvas) {
+            alert("Could not generate image. Please use Print to Save as PDF.");
+            return;
+          }
+
+          var imgData = canvas.toDataURL('image/jpeg', 0.95);
+          var candidateName = val('inp-fullname') || "Biodata";
+          var cleanFileName = candidateName.replace(/[^a-zA-Z0-9_-]/g, "_") + "_Marriage_Biodata.jpg";
+
+          var link = document.createElement('a');
+          link.href = imgData;
+          link.download = cleanFileName;
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        });
+      });
+
+      // -------------------------------------------------------------------------
+      // 16. FAQ ACCORDION INTERACTIVITY
+      // -------------------------------------------------------------------------
+      var faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(function (item) {
+        var q = item.querySelector('.faq-question');
+        q.addEventListener('click', function () {
+          var ans = item.querySelector('.faq-answer');
+          var isExpanded = ans.style.display !== 'none';
+          ans.style.display = isExpanded ? 'none' : 'block';
+        });
+      });
+
+      // -------------------------------------------------------------------------
+      // 17. INITIALIZE ON LOAD
+      // -------------------------------------------------------------------------
+      function init() {
+        // Initial render of default preset faith fields
+        renderFaithFields("hindu");
+
+        // Attempt restore from localStorage
+        var saved = null;
+        try {
+          var raw = localStorage.getItem(STORAGE_KEY);
+          if (raw) saved = JSON.parse(raw);
+        } catch (e) {}
+
+        if (saved) {
+          populateFormData(saved);
+        } else {
+          // Pre-populate with sample data so the page opens with an inspiring preview
+          populateFormData(SAMPLE_DATA);
+        }
+
+        setTimeout(applyPreviewScale, 50);
+      }
+
+      init();
+
+    })();
+  </script>
+</body>
+</html>
